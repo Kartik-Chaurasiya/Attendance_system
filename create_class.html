@@ -1,40 +1,178 @@
 <html>
 
 <head>
-   <title>Connecting MySQL Server</title>
-   <!-- CSS only -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-   <!-- JavaScript Bundle with Popper -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-   </script>
+    <title>Connecting MySQL Server</title>
+    <!-- CSS only --
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance</title>
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="A free html template with Sketch design made with Bootstrap">
+    <meta name="keywords" content="free html template, bootstrap, ui kit, sass" />
+    <meta name="author" content="Codrops" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- end favicon links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/flickity.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+
+
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #87A6A2;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:#374242;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #465656;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: black;
+  font-size: 12px;
+}
+.form .message a {
+  color: white;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+  
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+</style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Attendance</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav  ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="signup.html">Sign Up</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="require/view_my_codes.php">View my Codes</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
-   <form action="require/create_class.php" method="POST">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header-nav-wrapper">
+                <div class="carousel-cell" style="background-image: url(img/createclass1.png);">
+                <div class="logo">
+                    <!--a href="/index.html"><img src="img/synthetica-logo.png" alt="Synthetica Freebie"></a>-->
+                </div>
+                <div class="primary-nav-wrapper">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="home.php">Home</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                            <li><a href="require/view_my_codes.php">View my Codes</a></li>
+                          
+
+                        </ul>
+                    </nav>
+                    
+                    <div class="login-page">
+            <p style="font-size: 40px; color: #414a52; text-align: center; text-shadow: 2px 2px #6B7E7F"> Create Class</p><br><br>
+            <div class="form">
+                <form action="require/create_class.php" method="POST" class="login-form">
+                    <input type="text" placeholder="UserName" name="username"/>
+                    <input type="password" placeholder="Password" name="password" />
+                    <input type="email" placeholder="Email Address" name="email" />
+                    <input type="date" placeholder="dd-mm-yyyy" name="date">
+                    <input type="text" placeholder="eg: 'DC1'(should be unique); Share the code with the STUDENTS" name="code">
+
+                    <button type="submit" name="submit">Submit</button>
+
+
+                </form>
+            </div>
+        </div>
+                    
+                    
+                </div>
+            
+        
+
+        
+
+        <!--form action="require/create_class.php" method="POST">
       <div class="m-3">
          <label class="form-label">UserName</label>
          <input type="text" class="form-control" name="username">
@@ -57,7 +195,11 @@
          <input type="text" class="form-control" name="code" placeholder="eg: 'DC1'(should be unique); Share the code with the STUDENTS">
       </div>
       <button type="submit" class="btn btn-primary m-3" name="submit">Submit</button>
-   </form>
+       </form-->
+                </div>
+       </div>
+       </div>
+    </div>
 </body>
 
 </html>
