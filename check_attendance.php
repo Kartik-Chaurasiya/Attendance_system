@@ -143,7 +143,7 @@
                     <div class="primary-nav-wrapper">
                         <nav>
                             <ul class="primary-nav">
-                                <li><a href="home.php">Home</a></li>
+                                <li><a href="index.php">Home</a></li>
                                 <li><a href="signup.html">Sign Up</a></li>
                                 <li><a href="view_my_codes.php">View my Codes</a></li>
                             </ul>
