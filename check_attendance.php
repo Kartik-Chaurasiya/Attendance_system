@@ -145,7 +145,7 @@
                             <ul class="primary-nav">
                                 <li><a href="home.php">Home</a></li>
                                 <li><a href="signup.html">Sign Up</a></li>
-                                <li><a href="require/view_my_codes.php">View my Codes</a></li>
+                                <li><a href="view_my_codes.php">View my Codes</a></li>
                             </ul>
                         </nav>
                         <br><br><br><br><br>
