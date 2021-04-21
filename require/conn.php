@@ -1,9 +1,8 @@
 <?php
-         $dbhost = '	sql202.epizy.com';
+         $dbhost = 'sql202.epizy.com';
          $dbuser = 'epiz_28432376';
          $dbpass = 'n2QwpbAm2k7AMJk';
-		   $dbname = 'a_sys';
-         $port = '	3306';
+		   $dbname = 'epiz_28432376_a_sys';
          $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
          
          if(! $conn ) {
